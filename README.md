@@ -11,7 +11,6 @@ Este proyecto es una aplicación web construida con Next.js y TypeScript que per
 - **Favoritos**: Marca libros como favoritos y accede a una vista dedicada de favoritos (con paginación propia).
 - **Persistencia**: Los favoritos se guardan en localStorage.
 - **Modo oscuro/claro**: Alterna el esquema de colores de la interfaz.
-- **Página de detalles**: (Opcional) Puedes implementar una página de detalles para cada libro.
 
 ## Estructura del proyecto
 
