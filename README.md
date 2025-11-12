@@ -6,8 +6,8 @@ Incluye paginación, modo oscuro, persistencia de datos en localStorage y una in
 ---
 
 ## 🚀 Demo en producción
-🔗 [Ver aplicación desplegada en Vercel](https://tu-enlace-de-vercel.vercel.app)  
-📂 [Repositorio en GitHub](https://github.com/tuusuario/frontend-books)
+🔗 [Ver aplicación desplegada en Vercel](https://nextjs-books-catalog.vercel.app/)  
+📂 [Repositorio en GitHub](https://github.com/Eduardo1300/nextjs-books-catalog)
 
 ---
 
@@ -19,7 +19,6 @@ Incluye paginación, modo oscuro, persistencia de datos en localStorage y una in
 - **Favoritos:** Marca libros como favoritos y accede a una vista dedicada con su propia paginación.
 - **Persistencia:** Los favoritos se guardan en `localStorage` y permanecen tras recargar la página.
 - **Modo oscuro/claro:** Alterna entre temas de color con un solo clic.
-- **Diseño responsivo:** Interfaz adaptable a cualquier dispositivo.
 
 ---
 
@@ -46,14 +45,12 @@ frontend-books/
 
 ---
 
-bash
-bash
 
 ## ⚙️ Instalación y ejecución local
 
 1. Clona el repositorio:
    ```bash
-   git clone https://github.com/tuusuario/frontend-books.git
+   git clone https://github.com/Eduardo1300/nextjs-books-catalog.git
    cd frontend-books
    ```
 2. Instala las dependencias:
@@ -96,7 +93,7 @@ bash
 - Implementación de pruebas unitarias con Jest o React Testing Library.
 - Paginación dinámica basada en la API real.
 
-yaml
+
 
 ## 🙌 Créditos
 - **Datos:** Gutendex API
@@ -109,14 +106,4 @@ yaml
 👨‍💻 Autor: Christopher Eduardo Valdivia Baca
 📍 Lima, Perú
 
----
 
-✅ Con esta versión tu proyecto se ve **listo para evaluación profesional**.  
-Solo reemplaza los enlaces de **Vercel** y **GitHub** antes de subirlo.
-
----
-
-✅ Con esta versión tu proyecto se ve **listo para evaluación profesional**.  
-Solo reemplaza los enlaces de **Vercel** y **GitHub** antes de subirlo.  
-
-¿Quieres que te ayude a escribir el correo final para enviarlo a *Sebastián Acosta* con todo correctamente r
