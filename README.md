@@ -1,36 +1,79 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-## Getting Started
+# Catálogo de Libros - Next.js
 
-First, run the development server:
+Este proyecto es una aplicación web construida con Next.js y TypeScript que permite explorar, buscar y marcar como favoritos libros obtenidos de la API pública de Gutendex. Incluye paginación, modo oscuro, sistema de favoritos persistente y una vista dedicada para tus libros favoritos.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## Características principales
+
+- **Catálogo de libros**: Consulta libros de la API de Gutendex.
+- **Paginación**: Navega entre las páginas 1 a 5, con 10 libros por página.
+- **Búsqueda**: Filtra libros por título o autor.
+- **Favoritos**: Marca libros como favoritos y accede a una vista dedicada de favoritos (con paginación propia).
+- **Persistencia**: Los favoritos se guardan en localStorage.
+- **Modo oscuro/claro**: Alterna el esquema de colores de la interfaz.
+- **Página de detalles**: (Opcional) Puedes implementar una página de detalles para cada libro.
+
+## Estructura del proyecto
+
+```
+frontend-books/
+├─ src/
+│   ├─ app/
+│   │   ├─ components/
+│   │   │   └─ BooksList.tsx      # Componente principal de la lista de libros
+│   │   ├─ book/
+│   │   │   └─ [id]/
+│   │   │       └─ page.tsx       # Página de detalles de cada libro (si existe)
+│   │   ├─ layout.tsx             # Layout general de la app
+│   │   └─ page.tsx               # Página principal que muestra BooksList
+├─ public/                        # Archivos estáticos
+├─ package.json                   # Dependencias y scripts
+├─ tsconfig.json                  # Configuración de TypeScript y paths
+├─ tailwind.config.js             # Configuración de Tailwind (si existe)
+└─ ...otros archivos de config
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Instalación y uso
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+1. Clona el repositorio y entra en la carpeta del proyecto:
+	```bash
+	git clone <url-del-repo>
+	cd frontend-books
+	```
+2. Instala las dependencias:
+	```bash
+	npm install
+	```
+3. Inicia el servidor de desarrollo:
+	```bash
+	npm run dev
+	```
+4. Abre [http://localhost:3000](http://localhost:3000) en tu navegador.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Detalles técnicos
 
-## Learn More
+- **Next.js** (App Router)
+- **TypeScript**
+- **Tailwind CSS**
+- **API Gutendex**
+- **localStorage** para favoritos
 
-To learn more about Next.js, take a look at the following resources:
+## Funcionalidad de favoritos
+- Puedes marcar/desmarcar cualquier libro como favorito.
+- El botón "Ver favoritos" muestra todos tus favoritos, sin importar la página donde los marcaste, con paginación propia (10 por página).
+- Los favoritos se guardan en localStorage y se mantienen al recargar la página.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Modo oscuro
+- Usa el botón de la esquina superior para alternar entre modo claro y oscuro.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Personalización y mejoras
+- Puedes extender la app agregando una página de detalles para cada libro (`/book/[id]`).
+- Puedes agregar tests con Jest o React Testing Library.
 
-## Deploy on Vercel
+## Créditos
+- Datos obtenidos de [Gutendex API](https://gutendex.com/)
+- Proyecto realizado con Next.js, React y Tailwind CSS.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+¡Disfruta explorando y gestionando tu biblioteca digital!
