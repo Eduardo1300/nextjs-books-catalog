@@ -18,13 +18,23 @@ export default function Header({
 }: HeaderProps) {
   return (
     <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 mb-6">
-      <h1
-        className={`text-3xl font-extrabold tracking-tight ${
-          darkMode ? "text-gray-100" : "text-gray-900"
-        }`}
-      >
-        Catálogo de Libros
-      </h1>
+      <div>
+        <h1
+          className={`text-3xl font-extrabold tracking-tight ${
+            darkMode ? "text-gray-100" : "text-gray-900"
+          }`}
+        >
+          Catálogo de Libros
+        </h1>
+        <span
+          className={`block mt-1 text-xs font-medium ${
+            darkMode ? "text-yellow-300" : "text-blue-700"
+          }`}
+        >
+          <svg className="inline w-4 h-4 mr-1 mb-0.5" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M13 16h-1v-4h-1m1-4h.01M12 20a8 8 0 100-16 8 8 0 000 16z"/></svg>
+          Puede demorar unos segundos en cargar los libros, por favor espere...
+        </span>
+      </div>
 
       <div className="flex gap-2 items-center">
         <button
