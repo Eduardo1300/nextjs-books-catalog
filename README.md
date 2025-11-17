@@ -1,7 +1,11 @@
+
 # 📚 Catálogo de Libros - Next.js + TypeScript + Tailwind CSS
 
-Este proyecto es una aplicación web construida con **Next.js (App Router)** y **TypeScript** que permite explorar, buscar y marcar como favoritos libros obtenidos de la API pública de **Gutendex**.  
-Incluye paginación, modo oscuro, persistencia de datos en localStorage y una interfaz moderna y accesible con **Tailwind CSS**.
+Aplicación web construida con **Next.js (App Router)** y **TypeScript** que permite explorar, buscar y marcar como favoritos libros obtenidos de la API pública de **Gutendex**.
+
+Incluye paginación, modo oscuro (ahora activado por defecto), persistencia de datos en localStorage y una interfaz moderna, accesible y responsiva con **Tailwind CSS**.
+
+Recientemente se han realizado mejoras visuales sutiles (espaciado, sombras, bordes y transiciones) y el modo oscuro es el predeterminado al iniciar la app.
 
 ---
 
@@ -11,16 +15,19 @@ Incluye paginación, modo oscuro, persistencia de datos en localStorage y una in
 
 ---
 
+
 ## 🧠 Características principales
 
 - **Catálogo de libros:** Consulta libros desde la API pública de Gutendex.
 - **Paginación:** Navega entre las páginas 1 a 5, mostrando 10 libros por página.
-- **Búsqueda:** Filtra libros por título o autor (buscador en tiempo real).
-- **Favoritos:** Marca libros como favoritos y accede a una vista dedicada con su propia paginación.
+- **Búsqueda:** Filtra libros por título o autor (buscador en tiempo real, filtrado en cliente).
+- **Favoritos:** Marca libros como favoritos y accede a una vista dedicada con su propia paginación. Los favoritos se guardan en `localStorage` y se restauran automáticamente al recargar la página.
 - **Persistencia:** Los favoritos se guardan en `localStorage` y permanecen tras recargar la página.
-- **Modo oscuro/claro:** Alterna entre temas de color con un solo clic.
+- **Modo oscuro/claro:** Alterna entre temas de color con un solo clic. El modo oscuro es el predeterminado.
+- **Mejoras visuales:** Espaciado, bordes redondeados, sombras y transiciones suaves en los componentes.
 
 ---
+
 
 
 ## 🧩 Estructura del proyecto
@@ -30,10 +37,17 @@ frontend-books/
 ├─ src/
 │   ├─ app/
 │   │   ├─ components/
-│   │   │   └─ BooksList.tsx      # Componente principal de la lista de libros
+│   │   │   ├─ BookItem.tsx
+│   │   │   ├─ BooksList.tsx
+│   │   │   ├─ EmptyState.tsx
+│   │   │   ├─ Header.tsx
+│   │   │   ├─ LoadingSkeleton.tsx
+│   │   │   ├─ Pagination.tsx
+│   │   │   └─ SearchBar.tsx
 │   │   ├─ book/
 │   │   │   └─ [id]/
-│   │   │       └─ page.tsx       # Página de detalles de cada libro (opcional)
+│   │   │       └─ page.tsx       # Página de detalles de cada libro
+│   │   ├─ globals.css            # Estilos globales (Tailwind)
 │   │   ├─ layout.tsx             # Layout general de la app
 │   │   └─ page.tsx               # Página principal que muestra BooksList
 ├─ public/                        # Archivos estáticos
@@ -65,33 +79,40 @@ frontend-books/
    [http://localhost:3000](http://localhost:3000)
 
 
+
 ## 🧾 Tecnologías utilizadas
 
 - **Next.js 14+** (App Router)
-- **React 18**
+- **React 19**
 - **TypeScript**
 - **Tailwind CSS**
 - **Gutendex API**
 - **localStorage** para persistencia de datos
 
 
+
 ## 🌙 Funcionalidades destacadas
 
 ### ⭐ Favoritos
 - Marca y desmarca libros como favoritos.
-- Visualiza tus favoritos en una vista separada, con paginación.
-- Los datos se guardan en localStorage para mantenerlos persistentes.
+- Visualiza tus favoritos en una vista separada, con paginación (10 por página).
+- Los datos se guardan en localStorage para mantenerlos persistentes y se restauran automáticamente.
+- El sistema de favoritos es reactivo y se sincroniza con la UI en tiempo real.
 
 ### 💡 Modo oscuro
 - Cambia entre modo claro y oscuro mediante un botón en la UI.
-- La preferencia se conserva entre sesiones.
+- El modo oscuro es el predeterminado al iniciar la app.
+
 
 
 ## 🧱 Posibles mejoras futuras
 - Página de detalles ampliada para cada libro (`/book/[id]`).
-- Integración de un backend (NestJS o Express) para gestionar usuarios y listas.
+- Integración de un backend (NestJS, Express, etc.) para gestionar usuarios y listas.
 - Implementación de pruebas unitarias con Jest o React Testing Library.
 - Paginación dinámica basada en la API real.
+- Mejoras de rendimiento: memoización, caché, virtual scroll, etc.
+- Autenticación de usuarios y sincronización de favoritos en la nube.
+
 
 
 
